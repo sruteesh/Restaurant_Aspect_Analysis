@@ -1,0 +1,114 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 13, 2017, 5:23:22 PM
+    Author     : driveimac1
+*/
+
+
+
+
+/* ----------------------------------------------------------------
+        Content
+-----------------------------------------------------------------*/
+
+
+#content {
+    position: relative;
+    overflow: hidden;
+    background-color: #FFF;
+}
+
+#content p { line-height: 1.8; }
+
+.content-wrap {
+    position: relative;
+    padding: 80px 0;
+}
+
+
+#content .container { position: relative; }
+
+
+/* ----------------------------------------------------------------
+        Stretched Layout
+-----------------------------------------------------------------*/
+
+
+.stretched #wrapper {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+}
+
+.api_wrapper {
+    display: inline-block;
+    width: 100%;
+}
+
+.api_wrapper .api_intro{
+    text-align: center;
+}
+
+.api_input_wrapper {
+    padding: 30px;
+    display: inline-block;
+    width: 100%;
+}
+
+.api_input textarea{
+        min-height: 200px;
+        min-width: 86%;
+        border: 1px solid #297dcc;
+        }
+
+.textarea {
+    width: 100%;
+    height: 3rem;
+    background-color: transparent;
+        }
+        
+     
+/*.api_content{
+    
+    width: 100%;
+    padding: 50px 5%;
+    margin-bottom: 200px;
+}*/
+
+.api_submit{
+    padding: 20px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+}
+
+.api_submit button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: 1px solid #297dcc;
+    border-radius: 4px;
+    width: 150px;
+    color: #297dcc;
+    padding: 5px 12px;
+}
+
+.button {
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 11px system-ui;
+}
