@@ -9,7 +9,7 @@ sudo pip3.5 install -r requirements
 Get the models from sentiment neuron repo and copy them to the model folder inside sentiment_neuron
 ```
 git clone https://github.com/openai/generating-reviews-discovering-sentiment.git
-sudo cp -r generating-reviews-discovering-sentiment/model Restaurant_Analysis/sentiment_neuron/model
+sudo cp -r generating-reviews-discovering-sentiment/model Restaurant_Aspect_Analysis/sentiment_neuron/model
 ```
 
 # Example Request
