@@ -11,6 +11,12 @@ Get the models from sentiment neuron repo and copy them to the model folder insi
 git clone https://github.com/openai/generating-reviews-discovering-sentiment.git
 sudo cp -r generating-reviews-discovering-sentiment/model Restaurant_Aspect_Analysis/sentiment_neuron/model
 ```
+# Hosting the API
+Change the IP in the file api_v2.py to the IP (<hosted_ip>) you want to host and then do
+```
+python3.5 api_v2.py
+```
+the API should be running at your <hosted_ip>
 
 # Example Request
 ```
