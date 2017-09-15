@@ -69,7 +69,7 @@ params_restaurants = {
     "lstm_output_size":50,
     'max_data':100000
 }
-def load_aspects_model(path = "/home/sruteeshkumar/personal/flask_demo/aspects_models/",domain ='hotels'):
+def load_aspects_model(path = os.path.expanduser("~/Restaurant_Aspect_Analysis/aspects_models/"),domain ='hotels'):
     
     if domain=='hotels':
         # load json and create model
