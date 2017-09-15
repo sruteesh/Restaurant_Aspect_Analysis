@@ -436,7 +436,7 @@ def main():
 
     global neuron_model
     neuron_model = Model()
-    app.run(host='192.168.1.101',port=8085)
+    app.run(host='localhost',port=8085)
     # caffe.set_mode_gpu()
     # caffe.set_device(0)
     # #####   Location of model files
