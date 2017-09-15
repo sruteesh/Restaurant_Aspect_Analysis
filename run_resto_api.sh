@@ -9,6 +9,7 @@ if [ ! -d "Restaurant_Aspect_Analysis" ]; then
 	git lfs clone https://github.com/sruteesh/Restaurant_Aspect_Analysis.git
 	cd Restaurant_Aspect_Analysis
 else
+	cd Restaurant_Aspect_Analysis
 	git lfs pull
 fi;
 
