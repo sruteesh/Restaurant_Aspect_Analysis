@@ -1,33 +1,57 @@
-# Restaurant_Analysis
+# Resturant Aspect Analysis
+Get aspects and sentiment of the reviews
 
-Needs python3.5
+# Clone the Repo using git lfs
+
+# Install git lfs if not already installed
+```
+wget https://github.com/git-lfs/git-lfs/releases/download/v2.3.0/git-lfs-linux-amd64-2.3.0.tar.gz
+tar -xf git-lfs*
+cd git-lfs*
+./install.sh 
+```
+If you intend to use a pre-trained model you should clone the repository with the lfs plugin
+
+```
+git lfs clone https://github.com/sruteesh/Restaurant_Aspect_Analysis.git
+cd Restaurant_Aspect_Analysis
+```  
+If you have already cloned the repository without lfs, you can download the missing files with :
+
+`git lfs pull`
 
 # Install the requirements
-sudo pip3.5 install -r requirements.txt
+`pip3.5 install -r requirements.txt`
 
-# Download NLTK data
-Open a Python console and do the following:
-```
->>> import nltk
->>> nltk.download()
-showing info http://nltk.github.com/nltk_data/
-```
-In the GUI window that opens simply press the 'Download' button to download all corpora or go to the 'Corpora' tab and only download the ones you need/want.
+# Works for tensorflow 1.1.0, (installs CPU version)
+
+`pip3.5 install -U https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.1.0-cp35-cp35m-linux_x86_64.whl` for python3.5
+
+# GPU version
+`#pip3.5 install - U https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.3.0-cp35-cp35m-linux_x86_64.whl`
+
+# Download NLTK data using the following script
+`python3.5 download_nltk_data.py`
 
 # Requires Sentiment Models to work
-Get the models from sentiment neuron repo and copy them to the model folder inside sentiment_neuron
+# Uncompress the sentiment models 
 ```
-git clone https://github.com/openai/generating-reviews-discovering-sentiment.git
-sudo cp -r generating-reviews-discovering-sentiment/model Restaurant_Aspect_Analysis/sentiment_neuron/model
+cd sentiment_neuron
+if [ ! -d "model" ]; then
+	tar -xf model.tar.gz
+	cd ..
+fi;
 ```
-# Hosting the API
-Change the IP in the file api_v2.py to the IP (<hosted_ip>) you want to host and then do
-```
-python3.5 api_v2.py
-```
-the API should be running at your <hosted_ip>
 
-# Example Request
+# Hosting the API
+# Change the IP in the file api_v2.py to the IP (<hosted_ip>) you want to host and then do
+`python3.5 api_v2.py`
+
+# Run the following script to skip the above steps
+`./run_resto_api.sh`
+
+# Example Request to the API
 ```
 curl -X POST "http://<hosted_ip>:8085/aspects/" -H "Content-Type:application/json" -d '{"text":["Beautiful views of Munnar","Nice location","Perfect place!"],"domain":"hotels"}'
 ```
+
