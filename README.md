@@ -3,7 +3,16 @@
 Needs python3.5
 
 # Install the requirements
-sudo pip3.5 install -r requirements
+sudo pip3.5 install -r requirements.txt
+
+# Download NLTK data
+Open a Python console and do the following:
+```
+>>> import nltk
+>>> nltk.download()
+showing info http://nltk.github.com/nltk_data/
+```
+In the GUI window that opens simply press the 'Download' button to download all corpora or go to the 'Corpora' tab and only download the ones you need/want.
 
 # Requires Sentiment Models to work
 Get the models from sentiment neuron repo and copy them to the model folder inside sentiment_neuron
